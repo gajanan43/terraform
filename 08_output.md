@@ -36,6 +36,8 @@ output "ec2_private_ip" {
 6) install_nginx.sh
 
 ```
+install_nginx.sh
+
 sudo apt-get update
 sudo apt-get install nginx -y
 sudo systemctl start nginx
