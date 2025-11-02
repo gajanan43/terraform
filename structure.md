@@ -8,6 +8,6 @@
 
 ---
 1) block ->
-            i) variable
-           ii) resoucre
-          iii) output
+    i) variable
+   ii) resoucre
+   iii) output
