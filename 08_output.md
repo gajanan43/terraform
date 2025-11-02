@@ -43,6 +43,6 @@ sudo apt-get install nginx -y
 sudo systemctl start nginx
 sudo systemctl enable nginx
 
-echo "<h1>This is my terraform file with install nginx on ec2 instance</h1>"
+echo "<h1>This is my terraform file with install nginx on ec2 instance</h1>" | sudo tee /var/www/html/index
 
 ```
