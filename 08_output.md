@@ -22,3 +22,25 @@ output "ec2_private_ip" {
 }
 
 ```
+
+---
+---
+
+# Install nginx:
+
+1) terraform.tf
+2) providers.tf
+3) ec2.tf
+4) varible.tf
+5) outputs.tf
+6) install_nginx.sh
+
+```
+sudo apt-get update
+sudo apt-get install nginx -y
+sudo systemctl start nginx
+sudo systemctl enable nginx
+
+echo "<h1>This is my terraform file with install nginx on ec2 instance</h1>"
+
+```
