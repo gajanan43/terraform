@@ -8,6 +8,10 @@ resource local_file my_file {
 
 ```
 
+1) resource -> block(container)
+2) local_file -> resource type
+3) my_file -> resource name(identity name)
+
 ## working flow:
 
 1) terraform init(create a terraform envirnoment)
