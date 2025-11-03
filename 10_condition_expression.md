@@ -3,7 +3,7 @@
 1) terraform.tf
 2) providers.tf
 3) ec2.tf
-4) variable.tf  -> add a env variable
+4) variable.tf  -> add a new env variable
 5) outputs.tf   -> wirte conditional statement accordingly
 
 ```
