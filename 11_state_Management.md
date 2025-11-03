@@ -110,7 +110,7 @@ resource "aws_dynamodb_table" "basic-dynamodb-table" {
   }
 
   tags = {
-    Name        = "dmy_first_table"
+    Name        = "my_first_table"
   }
 }
 
