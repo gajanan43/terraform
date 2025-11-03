@@ -42,8 +42,8 @@ resource "aws_instance" "my_new_instance" {
 2) state conflict(Between persions on single account first want to run 1 instance & second persion want to run 2 instance)
 
 ## Solution is Remote Backend:
--  Store terraform.tfstate S3 bucket
--  Sate file locking using DynamoDB
+1)  Store terraform.tfstate S3 bucket
+2)  State file locking using DynamoDB
 
 -  first one change .tfstate file then trigger goes form s3 -> DynamoDB table & DynamoDB generate LockID
 -  If second want to change the file at that he cann't change because the LockID was generated
