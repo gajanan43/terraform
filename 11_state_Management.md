@@ -7,7 +7,7 @@
    ii) State locking with DynamoDB
 
 
-   
+# Role of state in infrastructure management:   
 
 ##  Commands:
 
@@ -31,3 +31,10 @@ resource "aws_instance" "my_new_instance" {
 - Apply this commands
   
 ```terraform import aws_instance.my_new_instance ami_id```
+
+---
+---
+
+# Secure state management best practices:
+
+
