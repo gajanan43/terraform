@@ -54,7 +54,7 @@ resource "aws_instance" "my_instance" {
 ---
 ---
 
-## for_each:
+## for_each & depends_on:
 
 1) terraform.tf
 2) providers.tf
