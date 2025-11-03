@@ -1,10 +1,18 @@
-# Commands:
+# State Management & Backends:
+1) Role of state in infrastructure management
+2) Secure state management best practices
+3) Remote state backends
+   i) AWS s3 for remote storage
+   ii) State locking with DynamoDB
+   
+
+##  Commands:
 
 1) terraform state list
 2) terraform state show state_name
 3) terraform state show rm state_name
 4) terraform import aws_key_pair.my_key key_id_on_aws
-5) 
+
 
 
 ## importing existing ec2(manual created):
