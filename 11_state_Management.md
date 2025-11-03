@@ -49,3 +49,69 @@ resource "aws_instance" "my_new_instance" {
 -  If second want to change the file at that he cann't change because the LockID was generated
 -  If someone want to access S3 bucket LockId cann't be generated
 
+
+---
+---
+
+# Practical:
+
+1) create new folder
+2) terraform.tf
+3) providers.tf
+4) s3.tf
+5) dynamodb.tf
+
+```
+s3.tf
+
+resource "aws_s3_bucket" "remote_s3" {
+  bucket = "my_first_bucket"
+
+  tags = {
+    Name        = "my_first_bucket"
+  }
+}
+
+```
+```
+terraform.tf
+
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 6.0"
+    }
+  }
+}
+
+```
+
+```
+providers.tf
+
+provider "aws" {
+  region = "us-east-1"
+}
+
+```
+
+```
+dynamodb.tf
+
+resource "aws_dynamodb_table" "basic-dynamodb-table" {
+  name           = "my_first_table"
+  billing_mode   = "PAY_PER_REQUEST"
+  hash_key       = "LockID"
+
+  attribute {
+    name = "LockID"
+    type = "S"
+  }
+
+  tags = {
+    Name        = "dmy_first_table"
+  }
+}
+
+```
