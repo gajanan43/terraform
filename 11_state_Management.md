@@ -1,9 +1,12 @@
-# State Management & Backends:
-1) Role of state in infrastructure management
-2) Secure state management best practices
-3) Remote state backends
-   i) AWS s3 for remote storage
+# State Management & Backends
+
+1) Role of state in infrastructure management  
+2) Secure state management best practices  
+3) Remote state backends  
+   i) AWS S3 for remote storage  
    ii) State locking with DynamoDB
+
+
    
 
 ##  Commands:
