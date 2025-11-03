@@ -55,6 +55,8 @@ resource "aws_instance" "my_new_instance" {
 
 # Practical:
 
+## Step 1:
+
 1) create new folder
 2) terraform.tf
 3) providers.tf
@@ -115,3 +117,35 @@ resource "aws_dynamodb_table" "basic-dynamodb-table" {
 }
 
 ```
+
+- apply command ```terraform refresh```
+- if delete the tf.state file & backup file we cann't get it
+
+## Step 2:
+
+1) terraform.tf -> add a backup(S3 & DynamoDB)
+2) providers.tf
+3) ec2.tf
+4) varible.tf
+5) outputs.tf
+
+```
+terraform.tf
+
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 6.0"
+    }
+  }
+
+backend "s3" {
+   bucket = "my_first_bucket"
+   key = "terraform.tfstate"
+   region = "us-east-1"
+   dynamodb_table = "my_first_table"
+}
+}
+
+- Now if delete the tf.state file we can get backup file form S3
